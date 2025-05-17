@@ -29,6 +29,10 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
+  --color-fancy-foreground: var(--fancy-foreground);
+  --color-fancy: var(--fancy);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-tertiary: var(--tertiary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
@@ -55,6 +59,10 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
+  --tertiary: oklch(0.97 0 0);
+  --tertiary-foreground: oklch(0.205 0 0);
+  --fancy: oklch(0.97 0 0);
+  --fancy-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -89,6 +97,10 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+  --tertiary: oklch(0.269 0 0);
+  --tertiary-foreground: oklch(0.985 0 0);
+  --fancy: oklch(0.269 0 0);
+  --fancy-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -112,11 +124,70 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("/fonts/BarlowCondensed-Regular.ttf") format("truetype");
+  font-weight: 300 500 700 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BarlowCondensed-Thin";
+  src: url("/fonts/BarlowCondensed-Thin.ttf") format("truetype");
+  font-weight: 300 500 700 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("/fonts/BeVietnamPro-Black.ttf") format("truetype");
+  font-weight: 300 500 700 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 500 700 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 300 500 700 900;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-[Roboto] text-sm;
+  }
+
+  h1 {
+    @apply font-[BeVietnamPro] uppercase my-6 font-extrabold text-3xl md:text-4xl 2xl:text-5xl tracking-tight;
+  }
+
+  h2 {
+    @apply font-[Manrope] mt-4 text-xl font-extrabold md:text-xl 2xl:text-3xl text-balance text-primary;
+  }
+
+  h3 {
+    @apply font-[Manrope] mt-2 font-bold text-lg lg:text-xl text-tertiary tracking-tight;
+  }
+
+  h4 {
+    @apply font-[BarlowCondensed-Thin] text-sm lg:text-lg mt-4 -mb-2;
+  }
+
+  h5 {
+    @apply font-[Manrope] text-accent font-thin text-xs xl:text-sm mt-3 -mb-2 tracking-widest uppercase;
+  }
+
+  p {
+    @apply leading-7 text-pretty mt-1;
   }
 }
