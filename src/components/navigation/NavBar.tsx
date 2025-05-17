@@ -31,31 +31,20 @@ export default function NavBar() {
     >
       <div className="mx-auto w-11/12">
         <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex items-center shrink-0">
-              {/* <Image
-                alt="Your Company"
-                src="/images/cappuccino.png"
-                className="w-auto h-8"
-                width={32}
-                height={32}
-              /> */}
-            </div>
-            <div className="sm:flex items-center sm:space-x-8 hidden sm:ml-6">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={`inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm ${
-                    isActive(item.href)
-                      ? "border-indigo-500"
-                      : "border-transparent hover:border-gray-300"
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
+          <div className="sm:flex items-center sm:space-x-8 hidden">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm ${
+                  isActive(item.href)
+                    ? "border-indigo-500"
+                    : "border-transparent hover:border-gray-300"
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
 
           <div className="flex items-center sm:hidden -mr-2">
