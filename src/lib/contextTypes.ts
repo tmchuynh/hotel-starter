@@ -12,12 +12,6 @@ import {
   ProductType,
   SortOption,
 } from "./interfaces&types/product";
-import {
-  AuthUser,
-  LoginCredentials,
-  ResetPasswordData,
-  SignUpCredentials,
-} from "./interfaces&types/user";
 
 export interface ProductContextType {
   getProductByName: (name: string) => ProductType | undefined;
@@ -194,21 +188,6 @@ export interface CustomerContextType {
     phone: string;
   } | null;
   isAuthenticated: boolean;
-}
-
-export interface AuthContextType {
-  user: AuthUser | null;
-  setUser: React.Dispatch<React.SetStateAction<AuthUser | null>>;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  error: string | null;
-  signUp: (credentials: SignUpCredentials) => Promise<void>;
-  login: (credentials: LoginCredentials) => Promise<void>;
-  logout: () => Promise<void>;
-  requestLoginCode: (identifier: string) => Promise<void>;
-  resetPasswordRequest: (email: string) => Promise<void>;
-  validateResetCode: (email: string, code: string) => Promise<boolean>;
-  resetPassword: (data: ResetPasswordData) => Promise<void>;
 }
 
 export interface PaymentContextType {
