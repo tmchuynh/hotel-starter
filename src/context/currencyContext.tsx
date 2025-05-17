@@ -61,7 +61,6 @@ const CurrencyContext = createContext<CurrencyContextType | undefined>(
  * @property {Function} setCurrency - Alias for setSelectedCurrency (legacy support)
  * @property {Function} calculateImportFee - Calculates import fees for given value and country
  * @property {Function} getImportTaxBreakdown - Provides detailed tax breakdown
- * @property {Function} calculateImportTaxes - Calculates duty and VAT charges
  * @property {Function} convertAmount - Converts amounts between currencies
  * @property {Function} formatCurrency - Formats currency amounts
  * @property {Function} updateExchangeRate - Updates exchange rate for a currency
@@ -121,98 +120,6 @@ export const CurrencyProvider = ({
     setSelectedCurrency(currency);
   };
 
-  /**
-   * Calculates import taxes (duty and VAT/GST) for a given subtotal and country
-   *
-   * @param subtotal - The subtotal amount to calculate taxes on
-   * @param country - The destination country code
-   * @returns An object containing:
-   *  - dutyAmount: The calculated duty amount
-   *  - vatAmount: The calculated VAT/GST amount
-   *  - totalImportCharges: Sum of duty and VAT charges
-   *  - appliedDuty: Boolean indicating if duty was applied
-   *  - appliedVAT: Boolean indicating if VAT was applied
-   *
-   * @remarks
-   * - Returns no import taxes for USA or unknown countries
-   * - Duty is only applied if subtotal exceeds country's de minimis duty threshold
-   * - VAT/GST is only applied if subtotal exceeds country's de minimis VAT threshold
-   */
-  const calculateImportTaxes = (subtotal: number, country: string) => {
-    // Get country tax info
-    const countryInfo = getTaxInfoByCountryCode(country);
-
-    // Default values
-    const result = {
-      dutyAmount: 0,
-      vatAmount: 0,
-      totalImportCharges: 0,
-      appliedDuty: false,
-      appliedVAT: false,
-    };
-
-    // If USA or unknown country, return default (no import taxes)
-    if (countryInfo.code === "USA" || countryInfo.code === "UNKNOWN") {
-      return result;
-    }
-
-    // Calculate duty if above de minimis threshold
-    if (subtotal > countryInfo.deMinimisDuty) {
-      result.dutyAmount = subtotal * countryInfo.dutyRate;
-      result.appliedDuty = true;
-    }
-
-    // Calculate VAT/GST if above de minimis threshold
-    if (subtotal > countryInfo.deMinimisVAT) {
-      result.vatAmount = subtotal * countryInfo.vatRate;
-      result.appliedVAT = true;
-    }
-
-    // Calculate total import charges
-    result.totalImportCharges = result.dutyAmount + result.vatAmount;
-
-    return result;
-  };
-
-  /**
-   * Calculates the import fee for a given value and country code.
-   *
-   * @param value - The monetary value to calculate import fees for
-   * @param countryCode - The two-letter ISO country code
-   * @returns The total import charges calculated for the given parameters
-   */
-  const calculateImportFee = (value: number, countryCode: string): number => {
-    const { totalImportCharges } = calculateImportTaxes(value, countryCode);
-    return totalImportCharges;
-  };
-
-  /**
-   * Calculates the breakdown of import taxes for a given subtotal and country.
-   *
-   * @param subtotal - The base amount before taxes and duties
-   * @param country - The country for which to calculate import taxes
-   *
-   * @returns An object containing:
-   * - duty: The calculated duty amount
-   * - vat: The calculated VAT amount
-   * - total: The sum of all import charges
-   * - subtotal: The original amount before taxes
-   * - grandTotal: The final amount including subtotal and all import charges
-   */
-  const getImportTaxBreakdown = (subtotal: number, country: string) => {
-    const { dutyAmount, vatAmount, totalImportCharges } = calculateImportTaxes(
-      subtotal,
-      country
-    );
-
-    return {
-      duty: dutyAmount,
-      vat: vatAmount,
-      total: totalImportCharges,
-      subtotal: subtotal,
-      grandTotal: subtotal + totalImportCharges,
-    };
-  };
 
   // Currency conversion functions
   /**
@@ -483,9 +390,6 @@ export const CurrencyProvider = ({
         setSelectedCurrency: handleSetCurrency,
         currency: selectedCurrency,
         setCurrency: handleSetCurrency,
-        calculateImportFee,
-        getImportTaxBreakdown,
-        calculateImportTaxes,
         convertAmount,
         formatCurrency,
         updateExchangeRate,
