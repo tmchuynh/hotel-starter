@@ -33,46 +33,12 @@ export interface CountryTaxInfo {
   hasImportFees: boolean; // Whether the country applies additional import processing fees
 }
 
-export interface PaymentSubmissionData {
-  cardDetails: CreditCard;
-  amount: number;
-  billingAddress?: {
-    address: string;
-    city: string;
-    state: string;
-    zipCode: string;
-    country: string;
-  };
-  customerInfo?: {
-    name: string;
-    email: string;
-    phone: string;
-  };
-}
-
 export interface CreditCard {
   number: string;
   expirationDate: string;
   cvv: string;
   issuer: string;
 }
-
-export interface Payment {
-  id: string;
-  amount: number;
-  status: PaymentStatus;
-  email: string;
-  date: Date;
-  cardDetails?: Partial<CreditCard>;
-  error?: string;
-}
-
-export type PaymentStatus =
-  | "success"
-  | "pending"
-  | "failed"
-  | "processing"
-  | "refunded";
 
 export type CurrencyCode = string;
 
@@ -87,28 +53,6 @@ export interface CurrencyContextType {
   setSelectedCurrency: (currency: Currency) => void;
   currency: Currency;
   setCurrency: (currency: Currency) => void;
-  calculateImportFee: (value: number, countryCode: string) => number;
-  getImportTaxBreakdown: (
-    subtotal: number,
-    country: string
-  ) => {
-    duty: number;
-    vat: number;
-    total: number;
-    subtotal: number;
-    grandTotal: number;
-  };
-  calculateImportTaxes: (
-    subtotal: number,
-    country: string
-  ) => {
-    dutyAmount: number;
-    vatAmount: number;
-    totalImportCharges: number;
-    appliedDuty: boolean;
-    appliedVAT: boolean;
-  };
-
   // Currency conversion
   convertAmount: (
     amount: number,
@@ -116,7 +60,6 @@ export interface CurrencyContextType {
     toCurrency: string
   ) => number;
   formatCurrency: (amount: number, currencyCode: string) => string;
-
   // Currency rates management
   updateExchangeRate: (currencyCode: string, newRate: number) => void;
   getExchangeRate: (currencyCode: string) => number;
