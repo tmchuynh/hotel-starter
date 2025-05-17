@@ -1,147 +1,107 @@
-import { Toolkit } from "@/lib/interfaces&types/product";
-
-export const toolkit: Toolkit[] = [
+export const hotelTypes = [
   {
-    id: "cognitiveBehavioralTherapyExercises",
-    title: "Cognitive Behavioral Therapy Exercises",
-    description: [
-      "Cognitive Behavioral Therapy (CBT) exercises are structured techniques that help individuals identify and challenge negative thinking patterns. These exercises are designed to promote positive thinking and emotional regulation by addressing cognitive distortions. By using CBT, individuals can learn to recognize thoughts that lead to anxiety, depression, or other mental health challenges and replace them with healthier alternatives. The aim is to help individuals reframe their thoughts, resulting in improved emotional well-being and greater resilience.",
-      "CBT exercises empower individuals to take control of their mental health by breaking the cycle of negative thinking. These exercises range from identifying automatic negative thoughts to more complex techniques that challenge core beliefs. As individuals regularly practice these exercises, they build stronger coping mechanisms and a more positive mindset. Ultimately, CBT offers a pathway to better mental health by fostering self-awareness and creating lasting behavioral changes.",
-    ],
-    subtitle:
-      "Unlock the Power of Your Mind: Transform Negative Thoughts into Positive Action",
-    image:
-      "https://img.freepik.com/free-photo/person-sharing-feelings-emotions-therapy-session_23-2151074003.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Solterra Cottages",
+    description:
+      "Solterra Cottages began as a vision from two architects who sought to redefine vacation housing by blending modern simplicity with the natural landscape. Originally inspired by their travels through the Mediterranean countryside, they built the first Solterra property as a tribute to slow living and organic design. Today, the brand curates boutique, earth-toned cottages nestled in scenic locales—ranging from vineyards to rolling hills. Each property emphasizes sustainability, with eco-conscious construction, solar-powered utilities, and partnerships with local farmers and artisans. Solterra’s mission is to help travelers reconnect with nature and themselves, all while enjoying the comforts of contemporary design. Features include custom interiors, private gardens, in-room chef services, and curated local excursions tailored to each region’s charm.",
   },
   {
-    id: "affirmationCards",
-    title: "Affirmation Cards",
-    description: [
-      "Affirmation cards are an effective tool for cultivating a positive mindset and boosting self-esteem. These cards feature uplifting messages that reinforce self-love, confidence, and inner strength. By repeating positive affirmations, individuals can challenge negative self-talk and replace it with empowering thoughts that support mental and emotional well-being. Affirmation cards can be used daily to focus the mind on positive qualities, reducing self-doubt and building resilience.",
-      "Incorporating affirmation cards into a morning or evening routine allows individuals to set the tone for the day or reflect on personal growth. Over time, this practice can shift thought patterns, making it easier to navigate challenges with a positive attitude. Affirmation cards are simple to use but have the potential to create lasting improvements in mental health by fostering a compassionate relationship with oneself. By focusing on the present moment and affirming one’s worth, individuals can improve their overall emotional state and develop a more optimistic outlook on life.",
-    ],
-    subtitle:
-      "Empower Your Mind: Daily Affirmations for Building Confidence and Self-Love",
-    image:
-      "https://img.freepik.com/premium-photo/astrology-astrologer-cards-burning-candles-background-tarot-cards-esoteric-background_1272242-5.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Solace & Summit Hotels",
+    description:
+      "Solace & Summit Hotels was founded on the belief that true luxury lies in balance—between comfort and adventure, stillness and movement, solitude and connection. Conceived by a former mountaineering guide and a hospitality executive, the brand focuses on refined, high-altitude escapes set in breathtaking alpine and cliffside locations. These properties are designed to evoke peace at the base and inspiration at the peak. Guests can expect elevated amenities such as fireside wellness spas, chef-curated highland menus, and guided excursions to hidden natural wonders. With sustainable builds that honor the environment and locally rooted design aesthetics, Solace & Summit offers more than just a stay—it delivers a philosophy. Their mission is to create sanctuaries where guests rediscover perspective above the noise of everyday life.",
   },
   {
-    id: "behavioralActivationActivities",
-    title: "Behavioral Activation Activities",
-    description: [
-      "Behavioral Activation Activities are designed to encourage individuals to engage in meaningful activities that help combat feelings of depression or low motivation. These activities are specifically chosen to enhance mood and give individuals a sense of accomplishment. The activities prompt individuals to reflect on what activities bring them joy, purpose, or fulfillment, and then help them structure their time around these activities. By engaging in positive behaviors, individuals can break the cycle of inactivity and negative thinking that often accompanies depression. Incorporating these activities into a routine encourages individuals to start small by engaging in activities that seem manageable, which can lead to an increased sense of accomplishment and emotional well-being. This technique fosters the idea that even small actions can contribute to significant improvements in mood and mental health. As individuals begin to see the benefits of behavioral activation, they can build momentum and tackle larger goals. By consistently practicing these exercises, individuals gain greater control over their mental health and create a more fulfilling, active life.",
-      "Mindfulness practices are designed to help individuals cultivate present-moment awareness and reduce stress. These resources may include guided meditations, breathing exercises, and mindfulness techniques specifically tailored for stress reduction. By using these tools, individuals can learn to focus their attention on the present moment, develop a greater sense of calm, and improve their overall mental health. The goal is to empower individuals to take control of their mindfulness practice and enhance their well-being. Effective mindfulness is essential for personal growth and emotional well-being. The Mindfulness Practices provide practical strategies for cultivating present-moment awareness and fostering a positive mindset. By incorporating these tools into daily routines, individuals can create a personalized approach to mindfulness that supports their mental health and well-being. The focus is on fostering a sense of clarity and empowerment in the face of challenges.",
-    ],
-    subtitle:
-      "Take Action: Engage in Meaningful Activities to Boost Your Mood and Motivation",
-    image:
-      "https://img.freepik.com/free-photo/kid-doing-occupational-therapy-session_23-2149091541.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Élan Heritage Collection",
+    description:
+      "The Élan Heritage Collection is a portfolio of meticulously restored historical properties turned into luxury boutique hotels. Founded by a team of preservationists and designers, the brand aims to breathe new life into architecturally significant estates, castles, manors, and villas across Europe and beyond. Each location is restored with reverence, blending old-world craftsmanship with modern sophistication. The interiors retain original materials and motifs—cobblestone floors, frescoed ceilings, and carved woodwork—while integrating discreet smart tech and contemporary furnishings. Guests experience immersive storytelling through curated experiences such as historical dinners, cultural salons, and behind-the-scenes restoration tours. Élan’s mission is to celebrate heritage while crafting unforgettable guest narratives rooted in authenticity, artistry, and place.",
   },
   {
-    id: "mindfulnessPractices",
-    title: "Mindfulness Practices",
-    description: [
-      "Mindfulness practices involve focusing on the present moment through activities like body scans, mindful walking, and breathing exercises. These practices encourage individuals to become more aware of their thoughts, feelings, and bodily sensations without judgment. By cultivating mindfulness, individuals can reduce stress, improve emotional regulation, and enhance their overall sense of well-being. Mindfulness exercises can be done anywhere, making it a practical tool for managing stress and maintaining a sense of calm throughout the day.",
-      "The key to mindfulness is non-judgmental awareness, which helps individuals gain greater control over their thoughts and emotions. It provides a sense of mental clarity, reduces anxiety, and enhances focus and concentration. Mindfulness practices are particularly helpful for those dealing with chronic stress, anxiety, or emotional turmoil. Over time, these practices can help individuals improve their resilience and build emotional intelligence, making it easier to navigate challenging situations.",
-    ],
-    subtitle:
-      "Live in the Moment: Harness the Power of Mindfulness to Reduce Stress and Improve Focus",
-    image:
-      "https://img.freepik.com/premium-photo/double-exposure-photo-young-man-meditates-while-practicing-yoga-freedom-concept_457222-42557.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "The Luxe Collection",
+    description:
+      "The Luxe Collection reimagines modern luxury through a cosmopolitan lens, offering a curated set of ultra-premium hotels in the world’s most iconic urban destinations. Designed for global citizens and tastemakers, each property pairs avant-garde design with seamless service, privacy, and technology. Founded by a former fashion house executive, the brand draws influence from haute couture, contemporary art, and global culinary innovation. Properties include private rooftop lounges, custom in-room scent libraries, digital concierge apps, and exclusive access to fashion, film, and cultural events. Their mission is to deliver next-level sophistication for travelers who value detail, discretion, and design-forward environments—turning each stay into a statement.",
   },
   {
-    id: "buildingResiliencePractices",
-    title: "Building Resilience Practices",
-    description: [
-      "The Resilience Toolkit provides a collection of resources designed to strengthen individuals' ability to cope with adversity. It includes techniques for managing stress, maintaining optimism, and developing mental toughness in the face of challenges. Building resilience helps individuals bounce back from setbacks, adapt to difficult circumstances, and stay focused on their goals despite obstacles. These tools aim to help individuals develop a mindset that views challenges as opportunities for growth and learning.",
-      "Through the use of the Resilience Toolkit, individuals can foster an internal strength that empowers them to tackle life's difficulties with confidence. Resilience is not about avoiding hardships but rather about equipping oneself with strategies to deal with them effectively. By practicing resilience-building exercises, individuals can cultivate the ability to remain steady and focused even during stressful or uncertain times. This toolkit offers practical steps for improving mental fortitude, helping individuals thrive in both personal and professional areas of their lives.",
-    ],
-    subtitle:
-      "Build Inner Strength: Develop Resilience to Overcome Life’s Challenges with Confidence",
-    image:
-      "https://img.freepik.com/premium-photo/woman-flexing-biceps-gazing-sunrise-symbolizing-motivation-empowerment_871349-38548.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "The Marlowe Group",
+    description:
+      "The Marlowe Group is a refined hotel and hospitality brand known for its quiet elegance, literary charm, and timeless European influence. Launched by a family of British hoteliers with roots in publishing, each property under The Marlowe name evokes a sense of classic sophistication, from antique libraries to cigar lounges and curated afternoon tea services. Located in cultural capitals and historic towns, their hotels cater to those who appreciate tradition with a modern sensibility. Rooms are thoughtfully detailed with handcrafted furniture, vintage typewriters, and bespoke amenities. The brand's mission is to create atmospheres where inspiration flows freely—whether you're writing a novel, exploring a gallery, or simply indulging in refined leisure. The Marlowe Group is where art, intellect, and hospitality meet.",
   },
   {
-    id: "nutritionInfographics",
-    title: "Nutrition Infographics",
-    description: [
-      "Nutrition tools focus on the relationship between diet and mental health. These resources provide guidance on how to make dietary choices that support emotional well-being. They may include meal planning templates, nutritional guidelines, and information on foods that can enhance mood and cognitive function. By understanding the impact of nutrition on mental health, individuals can make informed choices that promote overall wellness. These tools aim to empower individuals to take charge of their health through mindful eating practices.",
-      "Nutrition plays a vital role in mental health, as certain nutrients can influence mood, energy levels, and cognitive function. The Nutrition Tools encourage individuals to explore how their dietary habits affect their emotional state and provide practical steps for making healthier choices. By incorporating these tools into daily life, individuals can improve their mental clarity, emotional stability, and overall well-being. The goal is to create a balanced approach to nutrition that supports both physical and mental health.",
-    ],
-    subtitle:
-      "Nourish Your Mind: Discover the Connection Between Nutrition and Mental Well-Being",
-    image:
-      "https://img.freepik.com/free-photo/real-food-pyramid-assortment-top-view_23-2150238927.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Valencrest Hospitality",
+    description:
+      "Valencrest Hospitality was founded by a generational family of vineyard owners who sought to merge the world of fine wine with bespoke lodging. Originally starting as vineyard guesthouses in the rolling hills of Napa Valley, the brand has evolved into a collection of estate-style hotels known for tranquil luxury and warm, grounded service. Valencrest properties are always situated near winemaking regions and culinary hubs, offering wine immersion programs, vineyard spa therapies, and sommelier-led pairing dinners. Interiors reflect a countryside elegance—textured stone walls, hardwood finishes, and wraparound terraces with panoramic views. The brand’s mission is to elevate the rural hospitality experience by celebrating land, legacy, and local craftsmanship in every stay.",
   },
   {
-    id: "workLifeBalanceTools",
-    title: "Work Life Balance Tools",
-    description: [
-      "Work-life balance tools are designed to help individuals create a healthy equilibrium between their professional and personal lives. These resources may include time management strategies, boundary-setting techniques, and self-care practices specifically tailored for work-life balance. By using these tools, individuals can learn to prioritize their well-being, manage stress, and improve their overall quality of life. The goal is to empower individuals to take control of their work-life balance and enhance their mental health.",
-      "Achieving work-life balance is essential for mental health, as it helps individuals avoid burnout and maintain a sense of fulfillment in both their personal and professional lives. The Work-Life Balance Tools provide practical strategies for managing time and setting boundaries that support overall well-being. By incorporating these tools into daily routines, individuals can create a personalized approach to work-life balance that enhances their mental health and well-being. The focus is on fostering a sense of harmony and empowerment in the face of competing demands.",
-    ],
-    subtitle:
-      "Achieve Harmony: Essential Tools for Balancing Work and Life for Optimal Well-Being",
-    image:
-      "https://img.freepik.com/free-photo/young-pretty-joyful-brunette-woman-meditating-table-surround-work-stuff-flying-papers-cheerful-mood-taking-break-working-studying-relaxation-true-emotions_197531-1873.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Lunaris Retreats",
+    description:
+      "Lunaris Retreats is a celestial-inspired hospitality brand designed for those seeking inner renewal through nature, stillness, and sky. Each retreat is strategically placed in remote destinations with minimal light pollution and breathtaking stargazing conditions—from desert plateaus to forested hilltops. Founded by a wellness entrepreneur and an astronomer, Lunaris emphasizes slow travel, lunar-based wellness rituals, and nature-connected design. Features include moonlit meditation decks, observatory lounges, and immersive nighttime sound baths. Accommodations are minimalist yet luxurious—think panoramic skylights, organic bedding, and natural materials. Lunaris exists to help guests unplug from the world and reconnect with the cosmos, rhythms, and wonder that surround us.",
   },
   {
-    id: "strongCommunicationPractices",
-    title: "Strong Communication Practices",
-    description: [
-      "Communication tools are designed to help individuals improve their interpersonal skills and enhance their relationships. These resources may include active listening techniques, assertiveness training, and conflict resolution strategies specifically tailored for effective communication. By using these tools, individuals can learn to express themselves clearly, understand others better, and navigate difficult conversations with confidence. The goal is to empower individuals to take control of their communication skills and improve their overall mental health. Effective communication is essential for building strong relationships and maintaining emotional well-being. The Communication Tools provide practical strategies for enhancing interpersonal skills and fostering healthy connections with others. By incorporating these tools into daily interactions, individuals can create a personalized approach to communication that supports their mental health and well-being. The focus is on fostering a sense of connection and empowerment in the face of communication challenges.",
-      "Strong communication is essential for building healthy relationships and maintaining emotional well-being. The Communication Practices provide practical strategies for enhancing interpersonal skills and fostering positive connections with others. By incorporating these tools into daily interactions, individuals can create a personalized approach to communication that supports their mental health and well-being. The focus is on fostering a sense of connection and empowerment in the face of communication challenges.",
-    ],
-    subtitle:
-      "Connect and Communicate: Essential Tools for Enhancing Interpersonal Skills and Relationships",
-    image:
-      "https://img.freepik.com/premium-photo/business-people-designers-having-fun-chatting-workplace-office_522218-674.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Archevo Hotels & Resorts",
+    description:
+      "Archevo Hotels & Resorts merges bold architecture with cutting-edge hospitality to create unforgettable landmark properties. Each hotel is a fusion of art, structure, and experience—curated for design enthusiasts, architects, and cultural explorers. Founded by a global collective of designers and urban developers, Archevo properties serve as both a destination and an exhibit. Signature elements include monumental lobbies, cantilevered pool structures, kinetic lighting systems, and rotating art galleries. Set in major cities and design-forward locales, the brand’s mission is to elevate hotels into immersive architectural experiences that inspire awe, creativity, and dialogue.",
   },
   {
-    id: "leadershipTools",
-    title: "Leadership Tools",
-    description: [
-      "Leadership tools are designed to help individuals develop their leadership skills and enhance their effectiveness in guiding others. These resources may include goal-setting techniques, team-building strategies, and conflict resolution practices specifically tailored for effective leadership. By using these tools, individuals can learn to inspire and motivate others, foster collaboration, and navigate challenges with confidence. The goal is to empower individuals to take control of their leadership journey and improve their overall mental health.",
-      "Effective leadership is essential for creating a positive and productive environment. The Leadership Tools provide practical strategies for enhancing leadership skills and fostering strong connections with team members. By incorporating these tools into daily interactions, individuals can create a personalized approach to leadership that supports their mental health and well-being. The focus is on fostering a sense of empowerment and connection in the face of leadership challenges.",
-    ],
-    subtitle:
-      "Lead with Confidence: Essential Tools for Developing Leadership Skills and Inspiring Others",
-    image:
-      "https://img.freepik.com/free-photo/businessman-suit-using-his-white-king-chess-piece-dark-chess-pieces-table_181624-47212.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Maison Azure",
+    description:
+      "Maison Azure is a boutique hotel brand steeped in coastal elegance and Mediterranean ambiance. Born on the Côte d’Azur, the brand was founded by a French-Greek hospitality duo who dreamed of creating a timeless escape drenched in sunlight, sea breeze, and the soft palette of the Riviera. Each property features terracotta floors, breezy linens, and citrus-laden gardens. Maison Azure caters to discerning guests who crave understated luxury near water—whether along cliffside villages, island ports, or quiet marinas. Highlights include candlelit beachfront dining, bespoke sailing excursions, and partnerships with local artisans and perfumers. The mission is simple: to deliver the serenity of seaside living with the charm of European hospitality.",
   },
   {
-    id: "journalingPrompts",
-    title: "Journaling Prompts",
-    description: [
-      "Journaling prompts are designed to help individuals explore their thoughts and feelings through writing. These resources may include guided prompts, gratitude lists, and reflective exercises specifically tailored for journaling. By using these tools, individuals can learn to process their emotions, gain insight into their experiences, and develop a deeper understanding of themselves. The goal is to empower individuals to take control of their mental health through the practice of journaling.",
-      "Journaling is a powerful tool for self-reflection and emotional processing. The Journaling prompts provide practical strategies for enhancing the journaling experience and fostering personal growth. By incorporating these tools into daily writing practices, individuals can create a personalized approach to journaling that supports their mental health and well-being. The focus is on fostering a sense of clarity and empowerment in the face of emotional challenges.",
-    ],
-    subtitle:
-      "Write Your Way to Clarity: Essential Tools for Self-Reflection and Emotional Processing",
-    image:
-      "https://img.freepik.com/premium-photo/cozy-indoor-scene-someone-journaling-with-cup-tea-by-their-side-setting-is-warm-inviting-with-soft-lighting-comfortable-blankets-personal-items-like-books-plants-nearby_799429-7792.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Veridian Luxe Hotels",
+    description:
+      "Veridian Luxe Hotels was founded on a commitment to sustainable elegance—where environmental responsibility meets sophisticated urban living. Originating in Copenhagen and expanding globally, each Veridian property is designed with biophilic architecture, zero-waste kitchens, and carbon-conscious operations. Guests enjoy refined interiors crafted from reclaimed wood, native stone, and botanical textiles, all paired with smart eco-automation. Onsite offerings include green rooftop lounges, plant-based fine dining, and curated urban eco-tours. The brand attracts conscious luxury travelers who care as much about footprint as comfort. Veridian’s mission is to prove that sustainability and opulence not only coexist—they elevate one another.",
   },
   {
-    id: "checklistToolkit",
-    title: "Checklists Toolkit",
-    description: [
-      "Checklists are designed to help individuals organize their tasks and manage their time effectively. These resources may include daily planners, to-do lists, and goal-setting templates specifically tailored for productivity. By using these tools, individuals can learn to prioritize their responsibilities, set achievable goals, and create a structured approach to their daily lives. The goal is to empower individuals to take control of their time management and improve their overall mental health.",
-      "Effective time management is essential for reducing stress and enhancing productivity. The Checklists toolkit provide practical strategies for organizing tasks and fostering a sense of accomplishment. By incorporating these tools into daily routines, individuals can create a personalized approach to time management that supports their mental health and well-being. The focus is on fostering a sense of control and empowerment in the face of daily responsibilities.",
-    ],
-    subtitle:
-      "Organize Your Life: Essential Tools for Effective Time Management and Productivity",
-    image:
-      "https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938727.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "Nestlo Hospitality",
+    description:
+      "Nestlo Hospitality was built around the idea of intimate, design-first lodging experiences for digital creatives and minimalist travelers. The brand launched with a single modular lodge in New Zealand, crafted for the nomadic remote worker, and has since grown into a network of compact luxury stays around the world. Every Nestlo is thoughtfully integrated into its environment, offering high-speed connectivity, ergonomic workspaces, and minimalist Nordic interiors that encourage focus and clarity. With a loyal following among solo travelers, writers, and designers, Nestlo delivers intentional stillness with seamless function. Their mission: to offer creative minds a refined, quiet place to land—and launch.",
   },
   {
-    id: "fitnessCollection",
-    title: "Fitness Collection",
-    description: [
-      "The Fitness Collection provides a collection of workouts designed to help individuals improve their physical fitness and overall well-being. Physical fitness is essential for mental health, as regular exercise has been shown to reduce stress, improve mood, and enhance cognitive function. The Fitness Collection encourages individuals to explore different types of physical activity and find what works best for them.",
-    ],
-    subtitle:
-      "Get Fit, Feel Great: Essential Tools for Improving Physical Fitness and Mental Health",
-    image:
-      "https://img.freepik.com/premium-photo/african-american-athletic-guy-training-outdoors-summer-sporty-man-without-shirt-doing-warmup_164411-925.jpg?uid=R93718308&ga=GA1.1.1699338801.1739848115&semt=ais_hybrid&w=740",
+    name: "The Aurelia Haven",
+    description:
+      "The Aurelia Haven is a sanctuary brand crafted for serenity seekers and soul travelers. Rooted in Eastern philosophies of balance and intentional design, each hotel is positioned near spiritual sites, natural sanctuaries, or ancient trade routes. The brand’s name—derived from the Latin word for 'golden'—reflects its commitment to inner richness and outer calm. Guests are welcomed with personalized wellness programs, meditative architecture, and sacred silence zones. Rooms include private reflection gardens, aromatherapy stations, and access to visiting wellness practitioners. The Aurelia Haven’s mission is to offer sacred space for guests to restore, reflect, and transform—guided by light, land, and inner stillness.",
+  },
+  {
+    name: "OrbitStay Hotels",
+    description:
+      "OrbitStay Hotels is a futuristic hospitality brand reimagining the traveler experience through smart technology, adaptive design, and high-efficiency urban architecture. Geared toward tech-forward professionals and modern explorers, OrbitStay properties are located in high-density city centers and emerging digital hubs. Rooms include contactless check-in, AI-powered concierge systems, adaptive lighting, and integrated wellness tech. Common areas feature productivity pods, holographic meeting spaces, and curated tech lounges. The brand’s interiors blend sleek materials with bold accents—reflecting the pulse of urban innovation. OrbitStay’s mission is to streamline comfort, technology, and convenience for the connected traveler on the move.",
+  },
+  {
+    name: "Drift & Dwell",
+    description:
+      "Drift & Dwell is a laid-back lifestyle hospitality brand designed for casual, comfort-seeking travelers who value charm over opulence. Created by two surfers-turned-entrepreneurs, the brand captures the easy rhythm of coastal towns, desert hideaways, and forest cabins. Each property is styled with soft textures, handcrafted local decor, and an emphasis on communal living—think hammock gardens, fire pits, and open-air kitchens. Guests are encouraged to unplug, slow down, and connect with fellow wanderers. With no check-in desk and minimal structure, the experience is relaxed and human-first. The brand’s mission is to offer soulful, grounded escapes for travelers who crave connection and simplicity.",
+  },
+  {
+    name: "MetroRest Collective",
+    description:
+      "MetroRest Collective is a next-gen hospitality brand focused on sleek, comfortable stays for urban commuters, short-term business travelers, and flexible city-goers. Strategically located near transit hubs, startup corridors, and nightlife districts, each property offers compact, stylish micro-units equipped with just the right essentials—plush beds, soundproof walls, smart climate controls, and lightning-fast Wi-Fi. Community lounges, modular meeting pods, and 24-hour wellness rooms define the communal spaces. Designed for minimal hassle and maximum recharge, MetroRest caters to guests who want smart rest between high-paced urban schedules. The mission: provide seamless overnight stays in the heart of movement.",
+  },
+  {
+    name: "The Nuhaus Group",
+    description:
+      "The Nuhaus Group redefines corporate lodging by infusing creative energy into the world of executive accommodations. Founded by a former architect and venture capitalist, Nuhaus serves the innovation economy—hosting professionals, founders, and thought leaders in design-forward, high-performance spaces. Properties are located in global tech and financial capitals, offering private studios, extended-stay suites, and executive lounges. Interiors emphasize productivity, style, and wellness: ergonomic workstations, circadian lighting, custom scent profiles, and curated art from local creators. Onsite services include business concierge, pitch deck support, and networking salons. The Nuhaus mission is to create inspiring living environments for modern business travelers who refuse to sacrifice vision for utility.",
+  },
+  {
+    name: "Stayvibe Hotels",
+    description:
+      "Stayvibe Hotels delivers vibrant, pop-culture-infused stays for millennial and Gen Z travelers who value experience over formality. Designed like boutique social clubs, Stayvibe locations are rich in music, art, and interactivity. The brand’s aesthetic is bold and expressive—think neon signs, digital art walls, and collaborative lounges with a rotating lineup of local DJs and creators. Each property includes Insta-ready decor, themed rooms, rooftop events, and hyper-local food partnerships. Guests are encouraged to personalize their experience via in-app mood settings, digital check-ins, and vibe-curated itineraries. The mission is to make every night feel like a highlight reel, blending convenience with contagious creative energy.",
+  },
+  {
+    name: "Level38 Hospitality",
+    description:
+      "Level38 Hospitality is a luxury sky-hotel brand specializing in elevated experiences—both literally and metaphorically. Born from a real estate developer’s dream to bring resort-level service to vertical living, each Level38 property occupies the top floors of iconic urban skyscrapers around the globe. With panoramic city views, private lounges, and helipad transfers, the brand redefines exclusive urban escapes. Features include altitude-adjusted wellness spas, sky sommeliers, and penthouse suites with wraparound glass balconies. Guests are business elites, celebrities, and travelers who value discretion, design, and elevation—both in status and serenity. Level38’s mission: offer rarefied air for those who live life above the line.",
+  },
+  {
+    name: "Urban Thread Hotels",
+    description:
+      "Urban Thread Hotels is a lifestyle-driven hospitality brand that weaves together art, fashion, and culture into every aspect of the guest experience. Launched in collaboration with emerging designers and local curators, each hotel is built as a canvas—offering rotating pop-up shops, interactive exhibits, and wearable room amenities like custom robes and textile art. Rooms feature artisan-made furnishings, tactile materials, and cityscape views framed by layered textures. Located in creative districts and urban revitalization zones, Urban Thread attracts design lovers, influencers, and cultural explorers. Their mission is to stitch community, creativity, and comfort into every guest journey—making each stay an extension of the city’s living culture.",
+  },
+  {
+    name: "Cielo Haven",
+    description:
+      "A luxury hotel brand that focuses on providing a unique and immersive experience for guests. Cielo Haven properties are often located in stunning coastal or waterfront locations, offering breathtaking views and a tranquil atmosphere. The brand is known for its elegant accommodations, personalized service, and attention to detail. Guests can expect beautifully designed rooms, fine dining options featuring fresh local ingredients, and a range of activities that highlight the natural beauty of the surroundings. Cielo Haven aims to create memorable stays that combine luxury with a deep appreciation for nature and the environment.",
+  },
+  {
+    name: "StayCabana",
+    description:
+      "A modern hotel brand that focuses on providing a comfortable and convenient experience for travelers. StayCabana properties are often located in urban areas, offering easy access to local attractions and amenities. The brand is known for its contemporary design, friendly service, and commitment to guest satisfaction. Guests can expect well-appointed rooms, on-site dining options, and a range of amenities such as fitness centers and business facilities. StayCabana aims to create a welcoming atmosphere for both leisure and business travelers, with a focus on comfort, convenience, and affordability.",
   },
 ];
